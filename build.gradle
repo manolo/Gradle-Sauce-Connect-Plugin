@@ -11,9 +11,12 @@ buildscript {
 
 apply plugin: "com.gradle.plugin-publish"
 apply plugin: "groovy"
+apply plugin: 'java'
+apply plugin: 'maven-publish'
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
@@ -36,4 +39,12 @@ pluginBundle {
       displayName = "Sauce Connect Plugin for the Vaadin Platform"
     }
   }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
 }

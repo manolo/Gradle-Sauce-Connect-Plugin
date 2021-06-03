@@ -1,3 +1,16 @@
+# DISCLAIMER
+
+This is an Un-Official branch of SauceConnectPlugin used to build Vaadin Platform.
+
+We needed to fork it because of the following reasons
+
+- They are not publishing the plugin with new changes
+- The plugin is not compatible with modern gradle versions
+
+The artifact has been renamed to `com.vaadin.plugin.sauce:Gradle-Sauce-Connect-Plugin`
+
+
+
 # Gradle SauceConnect Plugin
 
 This is SauceConnect plugin that downloads, starts and stops SauceLab's SauceConnect application.

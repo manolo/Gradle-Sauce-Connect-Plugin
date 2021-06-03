@@ -5,7 +5,7 @@ buildscript {
     }
   }
   dependencies {
-    classpath "com.gradle.publish:plugin-publish-plugin:0.9.7"
+    classpath "com.gradle.publish:plugin-publish-plugin:latest.release"
   }
 }
 
@@ -21,19 +21,19 @@ dependencies {
     implementation localGroovy()
 }
 
-version = "0.0.14"
-group = "SauceConnectPlugin"
+version = "0.0.15"
+group = "com.vaadin.plugin.sauce"
 
 pluginBundle {
-  website = "https://github.com/aginteractive/Gradle-Sauce-Connect-Plugin"
-  vcsUrl = "https://github.com/aginteractive/Gradle-Sauce-Connect-Plugin.git"
-  description = "Official release of SauceConnectPlugin"
+  website = "https://github.com/manolo/Gradle-Sauce-Connect-Plugin"
+  vcsUrl = "https://github.com/manolo/Gradle-Sauce-Connect-Plugin.git"
+  description = "Unofficial release of SauceConnectPlugin used to build Vaadin Platform"
   tags = ['SauceLabs', 'SauceConnect']
 
   plugins {
     SauceConnectPlugin {
-      id = "com.saucelabs.SauceConnectPlugin"
-      displayName = "Sauce Connect Plugin"
+      id = "com.vaadin.plugin.sauce.SauceConnectPlugin"
+      displayName = "Sauce Connect Plugin for the Vaadin Platform"
     }
   }
 }

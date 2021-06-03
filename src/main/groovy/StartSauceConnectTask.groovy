@@ -1,4 +1,4 @@
-package com.saucelabs
+package com.vaadin.plugin.sauce
 
 import java.io.File
 import org.gradle.api.DefaultTask

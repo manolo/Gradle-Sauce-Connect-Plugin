@@ -1,4 +1,4 @@
-package com.saucelabs
+package com.vaadin.plugin.sauce
 
 import org.gradle.internal.os.OperatingSystem
 import org.gradle.nativeplatform.platform.Architecture

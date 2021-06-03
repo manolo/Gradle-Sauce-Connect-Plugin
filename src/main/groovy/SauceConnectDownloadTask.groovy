@@ -1,4 +1,4 @@
-package com.saucelabs
+package com.vaadin.plugin.sauce
 
 import groovy.json.JsonSlurper
 import java.io.File

@@ -1,4 +1,4 @@
-package com.saucelabs
+package com.vaadin.plugin.sauce
 
 import org.gradle.api.GradleException
 import org.gradle.api.Plugin

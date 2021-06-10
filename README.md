@@ -9,6 +9,10 @@ We needed to fork it because of the following reasons
 
 The artifact has been renamed to `com.vaadin.plugin.sauce:Gradle-Sauce-Connect-Plugin`
 
+## Building
+
+- To compile and install the plugin locally just run `./gradlew publishToMavenLocal`
+- To deploy to gradle central, you need an account as described in this [article](https://plugins.gradle.org/docs/submit), then you can execute `./gradlew publishPlugins`
 
 
 # Gradle SauceConnect Plugin

@@ -1,3 +1,5 @@
+package com.vaadin.plugin.sauce
+
 import org.gradle.api.NamedDomainObjectContainer
 import org.gradle.api.tasks.Internal
 

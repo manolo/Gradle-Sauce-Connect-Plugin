@@ -1,18 +1,10 @@
-buildscript {
-  repositories {
-    maven {
-      url "https://plugins.gradle.org/m2/"
-    }
-  }
-  dependencies {
-    classpath "com.gradle.publish:plugin-publish-plugin:latest.release"
-  }
+plugins {
+  id "com.gradle.plugin-publish" version "latest.release"
+  id "java-gradle-plugin"
+  id "groovy"
+  id "java"
+  id "maven-publish"
 }
-
-apply plugin: "com.gradle.plugin-publish"
-apply plugin: "groovy"
-apply plugin: 'java'
-apply plugin: 'maven-publish'
 
 repositories {
     mavenCentral()
@@ -24,8 +16,17 @@ dependencies {
     implementation localGroovy()
 }
 
-version = "0.0.16"
+version = "0.0.15"
 group = "com.vaadin.plugin.sauce"
+
+gradlePlugin {
+  plugins {
+    SauceConnectPlugin {
+      id = "com.vaadin.plugin.sauce.SauceConnectPlugin"
+      implementationClass = 'com.vaadin.plugin.sauce.SauceConnectPlugin'
+    }
+  }
+}
 
 pluginBundle {
   website = "https://github.com/manolo/Gradle-Sauce-Connect-Plugin"
@@ -35,16 +36,7 @@ pluginBundle {
 
   plugins {
     SauceConnectPlugin {
-      id = "com.vaadin.plugin.sauce.SauceConnectPlugin"
       displayName = "Sauce Connect Plugin for the Vaadin Platform"
     }
   }
-}
-
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            from components.java
-        }
-    }
 }
